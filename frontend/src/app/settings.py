@@ -80,7 +80,7 @@ DATABASES = {
 
 # Static Files (WhiteNoise)
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = [p for p in [BASE_DIR / "static", SRC_DIR / "static"] if p.exists()]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 WHITENOISE_USE_FINDERS = True  # Serves directly from STATICFILES_DIRS if collectstatic wasn't run during build
 
