@@ -1,0 +1,14 @@
+import logging
+import sys
+
+
+def configure_logging() -> logging.Logger:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
+        handlers=[logging.StreamHandler(sys.stdout)],
+    )
+    return logging.getLogger("rns.backend")
+
+
+logger = configure_logging()

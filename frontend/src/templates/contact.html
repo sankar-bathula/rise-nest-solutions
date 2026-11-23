@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-5 gap-12">
+        <div class="md:col-span-2 space-y-6">
+            <span class="text-sky-400 font-mono text-xs uppercase">Engagement Desk</span>
+            <h1 class="text-3xl md:text-4xl font-bold text-white">Initiate an RNS Engagement</h1>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Select your primary practice area and share your goals. Every submission generates an instant reference ID routed directly to our practice leads.
+            </p>
+            <div class="pt-4 border-t border-slate-800 space-y-3 text-sm">
+                <div>
+                    <span class="text-xs font-mono text-slate-500 block">LOCATION</span>
+                    <span class="text-white">Hyderabad, Telangana, India</span>
+                </div>
+                <div>
+                    <span class="text-xs font-mono text-slate-500 block">PRACTICES</span>
+                    <span class="text-slate-300">Consultancy • App Dev • AI Services • Automation • IT Ops</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8">
+            {% if receipt %}
+            <div class="py-8 text-center space-y-4">
+                <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto text-2xl font-bold">
+                    ✓
+                </div>
+                <h2 class="text-2xl font-bold text-white">Project Inquiry Registered</h2>
+                <p class="text-slate-300 text-sm max-w-md mx-auto">
+                    Thank you, <strong>{{ receipt.full_name }}</strong>. Your request has been logged under priority tier <span class="text-sky-400 font-mono">{{ receipt.priority_tag }}</span>.
+                </p>
+                <div class="inline-block px-4 py-2 rounded-lg bg-slate-950 border border-slate-700 font-mono text-sky-400 text-sm">
+                    Reference ID: {{ receipt.reference_id }}
+                </div>
+                <div class="pt-6">
+                    <a href="{% url 'home' %}" class="px-5 py-2.5 rounded-lg bg-sky-500 text-slate-950 font-semibold text-sm">
+                        Return to Home
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <form method="post" action="{% url 'contact' %}" class="space-y-5">
+                {% csrf_token %}
+
+                {% if error_message %}
+                <div class="p-4 rounded-lg bg-red-500/10 border border-red-500/40 text-red-300 text-xs">
+                    {{ error_message }}
+                </div>
+                {% endif %}
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-mono text-slate-300 mb-2">FULL NAME *</label>
+                        <input type="text" name="full_name" required value="{{ form_data.full_name }}"
+                               class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-300 mb-2">WORK EMAIL *</label>
+                        <input type="email" name="work_email" required value="{{ form_data.work_email }}"
+                               class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-mono text-slate-300 mb-2">COMPANY *</label>
+                        <input type="text" name="company_name" required value="{{ form_data.company_name }}"
+                               class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-300 mb-2">PHONE</label>
+                        <input type="text" name="phone" value="{{ form_data.phone|default:'' }}"
+                               class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-2">PRIMARY SERVICE PILLAR *</label>
+                    <select name="service_slug"
+                            class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">
+                        {% for svc in services %}
+                        <option value="{{ svc.slug }}" {% if form_data.service_slug == svc.slug %}selected{% endif %}>
+                            {{ svc.title }} — {{ svc.tagline }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-2">PROJECT SCOPE & TIMELINE *</label>
+                    <textarea name="project_scope" rows="4" required minlength="10"
+                              placeholder="Describe your objectives, systems involved, and expected outcomes..."
+                              class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-700 text-white text-sm focus:border-sky-400 focus:outline-none">{{ form_data.project_scope }}</textarea>
+                </div>
+
+                <button type="submit"
+                        class="w-full py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition">
+                    Submit Inquiry
+                </button>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

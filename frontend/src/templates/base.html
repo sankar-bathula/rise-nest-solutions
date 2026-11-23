@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default:"Rise Nest Solutions" }}</title>
+
+    <!-- Favicons & App Manifest -->
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}" sizes="48x48">
+    <link rel="icon" href="{% static 'favicon/favicon.svg' %}" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <meta name="theme-color" content="#050914">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050914; color: #F8FAFC; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .arch-grid {
+            background-image: linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col arch-grid antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-[#050914]/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Brand Logo & Name -->
+            <a href="{% url 'home' %}" class="flex items-center gap-3 group">
+                <span class="flex items-center justify-center h-10 w-10 rounded-lg bg-white/95 p-1 shadow-sm ring-1 ring-sky-400/30 transition-transform duration-200 group-hover:scale-105">
+                    <img src="{% static 'img/logo-icon.svg' %}"
+                         alt="Rise Nest Solutions"
+                         class="h-full w-full object-contain">
+                </span>
+                <span class="font-bold text-lg tracking-tight text-white">
+                    Rise Nest <span class="text-sky-400">Solutions</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+                <a href="{% url 'home' %}#pillars" class="hover:text-sky-400 transition">Practice Pillars</a>
+                <a href="{% url 'home' %}#delivery-model" class="hover:text-sky-400 transition">Architecture</a>
+                <a href="{% url 'contact' %}" class="hover:text-sky-400 transition">Contact Us</a>
+            </nav>
+
+            <a href="{% url 'contact' %}"
+               class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition">
+                Subscribe
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-[#03060E] py-10 mt-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-slate-400">
+            <div class="flex flex-wrap items-center ">
+                <!-- Brand Logo & Name (Matching Header Format) -->
+                <a href="{% url 'home' %}" class="flex items-center gap-3 group">
+                    <span class="flex items-center justify-center h-10 w-10 rounded-lg bg-white/95 p-1 shadow-sm ring-1 ring-sky-400/30 transition-transform duration-200 group-hover:scale-105">
+                        <img src="{% static 'img/logo-icon.svg' %}"
+                             alt="Rise Nest Solutions"
+                             class="h-full w-full object-contain">
+                    </span>
+                    <span class="font-bold text-lg tracking-tight text-white">
+                        Rise Nest <span class="text-sky-400">Solutions</span>
+                    </span>
+                </a>
+                <span class="hidden sm:inline text-slate-600">—</span>
+                <span>Consultancy • Application Development • AI Services • Automation • IT Operations</span>
+            </div>
+            <!-- <div class="flex gap-6 font-mono text-xs">
+                <a href="{% url 'home' %}" class="hover:text-sky-400">HOME</a>
+                <a href="{% url 'contact' %}" class="hover:text-sky-400">CONTACT</a>
+                <a href="{% url 'health' %}" class="hover:text-sky-400">HEALTH</a>
+            </div> -->
+        </div>
+    </footer>
+</body>
+</html>
