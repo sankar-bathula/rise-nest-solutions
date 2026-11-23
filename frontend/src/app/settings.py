@@ -18,6 +18,10 @@ ALLOWED_HOSTS = [
     if h.strip()
 ]
 
+if vercel_url := os.getenv("VERCEL_URL"):
+    if vercel_url not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append(vercel_url)
+
 CSRF_TRUSTED_ORIGINS = [
     o.strip()
     for o in os.getenv(
@@ -26,6 +30,9 @@ CSRF_TRUSTED_ORIGINS = [
     ).split(",")
     if o.strip()
 ]
+
+# Required so Django trusts HTTPS headers forwarded by Vercel's proxy
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
