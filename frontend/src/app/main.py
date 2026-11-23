@@ -2,7 +2,7 @@ import os
 import sys
 from pathlib import Path
 
-# Ensure frontend/src is on sys.path for Vercel serverless runtime
+# Add frontend/src to sys.path so 'app.settings' and 'app.urls' resolve
 SRC_DIR = Path(__file__).resolve().parent.parent
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
