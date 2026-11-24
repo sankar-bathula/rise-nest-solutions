@@ -52,6 +52,16 @@ FALLBACK_PILLARS = [
         "tech_stack": ["Docker", "Kubernetes", "Terraform", "Prometheus"],
         "business_impact": "55% lower Mean Time to Resolution (MTTR)",
     },
+    {
+        "slug": "IT-Infrastructure-Managed-Services",
+        "code": "06 // Admin",
+        "title": "IT Infrastructure & Managed Services",
+        "tagline": "infrastructure monitoring, server maintenance, IT support and incident management",
+        "summary": "Proactive Server anomaly detection, Infrastructure-as-Code, zero-downtime CI/CD, and 24/7 SRE support.",
+        "deliverables": ["Services Self-Healing Runbooks", "Kubernetes & Terraform IaC", "24/7 L2/L3 SLA Production Support"],
+        "tech_stack": ["Admin", "Network", "Helpdesk", "Server Maintenance"],
+        "business_impact": "68% lower Mean Time to Resolution (MTTR)",
+    },
 ]
 
 
