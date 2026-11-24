@@ -9,7 +9,7 @@ def home_view(request):
         request,
         "home.html",
         {
-            "page_title": "Rise Nest Solutions | Consultancy, App Dev, AI, Automation & IT Ops",
+            "page_title": "Rise Nest Solutions",
             "services": services,
         },
     )
