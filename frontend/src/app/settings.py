@@ -100,5 +100,5 @@ STORAGES = {
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Backend FastAPI URL (switches automatically per environment)
-BACKEND_API_URL = os.getenv("BACKEND_API_URL", "http://127.0.0.1:8000")
+BACKEND_API_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000" if ENVIRONMENT == "development" else "https://api.risenestsolutions.com")
 BACKEND_API_KEY = os.getenv("BACKEND_API_KEY", "")
