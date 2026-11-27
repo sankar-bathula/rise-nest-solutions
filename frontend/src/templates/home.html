@@ -26,7 +26,7 @@
     </div>
 </section>
 
-<section id="pillars" class="py-16 px-6">
+<section id="pillars" class="scroll-mt-20 py-16 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="mb-12">
             <span class="text-sky-400 font-mono text-xs uppercase">Capabilities</span>
@@ -81,7 +81,7 @@
     </div>
 </section>
 
-<section id="delivery-model" class="py-16 px-6">
+<section id="delivery-model" class="scroll-mt-20 py-16 px-6">
     <div class="max-w-7xl mx-auto rounded-2xl border border-slate-800 bg-slate-900/40 p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
         <div>
             <span class="text-indigo-400 font-mono text-xs uppercase">Unified Execution</span>
@@ -121,6 +121,217 @@
             <div class="p-3.5 rounded-xl bg-slate-950 border border-amber-500/30 flex justify-between items-center gap-4">
                 <span class="text-amber-400 shrink-0">07 // MANAGED IT &amp; SUPPORT</span>
                 <span class="text-slate-400 text-right">Prometheus, ServiceNow, CI/CD &amp; 24/7 SRE</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="industries" class="scroll-mt-20 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div>
+                <span class="text-sky-400 font-mono text-xs uppercase">Vertical Expertise</span>
+                <h2 class="text-3xl font-bold text-white mt-1">Industries We Transform</h2>
+                <p class="text-slate-400 text-sm mt-2 max-w-2xl">
+                    Domain-engineered software, intelligent automation, and compliant cloud architectures tailored to mission-critical sectors.
+                </p>
+            </div>
+            <a href="{% url 'about' %}" class="text-sm font-semibold text-sky-400 hover:text-sky-300 transition shrink-0">
+                10+ Years Cross-Industry Delivery &rarr;
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 1. Manufacturing -->
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-sky-500/50 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 font-mono text-xs">
+                            IND-01 // INDUSTRIAL
+                        </span>
+                        <span class="text-xs font-mono text-emerald-400">Smart Factory &amp; ERP</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white">Manufacturing</h3>
+                    <p class="text-xs text-sky-400 font-medium mt-1">Connected Operations, Supply Chain &amp; Predictive Telemetry</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mt-4">
+                        Modernizing shop-floor execution and global supply chains through real-time IoT telemetry, predictive maintenance models, and automated ERP/MES workflow orchestration.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Predictive equipment maintenance &amp; OEE anomaly detection</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Automated procurement, inventory &amp; ERP/MES synchronization</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>End-to-end supply chain control towers &amp; vendor portals</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800/80">
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">IoT Telemetry</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">SAP / ERP APIs</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Predictive AI</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">RPA</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm font-semibold">
+                        <span class="text-slate-400 font-mono text-xs">Zero-Downtime Operations</span>
+                        <a href="{% url 'contact' %}?industry=manufacturing" class="text-sky-400 hover:text-sky-300">
+                            Discuss Use Case &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Healthcare -->
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-sky-500/50 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 font-mono text-xs">
+                            IND-02 // LIFE SCIENCES
+                        </span>
+                        <span class="text-xs font-mono text-emerald-400">HIPAA &amp; Interoperability</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white">Healthcare</h3>
+                    <p class="text-xs text-sky-400 font-medium mt-1">Compliant Digital Health, EHR Integration &amp; Clinical AI</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mt-4">
+                        Engineering secure, interoperable patient platforms, revenue-cycle automation, and clinical decision-support pipelines built around strict privacy and regulatory governance.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>HL7 / FHIR interoperability &amp; EHR/EMR system integrations</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Intelligent document processing (IDP) for claims &amp; prior auth</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>HIPAA-aligned cloud infrastructure &amp; zero-trust access controls</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800/80">
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">HL7 / FHIR</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">HIPAA / SOC 2</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Clinical RAG</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">IDP</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm font-semibold">
+                        <span class="text-slate-400 font-mono text-xs">Privacy-First Engineering</span>
+                        <a href="{% url 'contact' %}?industry=healthcare" class="text-sky-400 hover:text-sky-300">
+                            Discuss Use Case &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Retail & E-Commerce -->
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-sky-500/50 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 font-mono text-xs">
+                            IND-03 // COMMERCE
+                        </span>
+                        <span class="text-xs font-mono text-emerald-400">High-Concurrency Scale</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white">Retail &amp; E-Commerce</h3>
+                    <p class="text-xs text-sky-400 font-medium mt-1">Omnichannel Platforms, Demand AI &amp; Order Orchestration</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mt-4">
+                        Building resilient digital storefronts, real-time inventory synchronization, AI-driven personalization, and automated fulfillment workflows engineered for peak traffic spikes.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Headless e-commerce architectures &amp; omnichannel OMS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>AI demand forecasting, dynamic pricing &amp; catalog enrichment</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Auto-scaling cloud SRE for flash sales &amp; seasonal surges</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800/80">
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Headless APIs</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Demand ML</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Kubernetes</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">OMS / WMS</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm font-semibold">
+                        <span class="text-slate-400 font-mono text-xs">99.99% Peak Availability</span>
+                        <a href="{% url 'contact' %}?industry=retail-ecommerce" class="text-sky-400 hover:text-sky-300">
+                            Discuss Use Case &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Finance & Banking -->
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-sky-500/50 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 font-mono text-xs">
+                            IND-04 // BFSI &amp; FINTECH
+                        </span>
+                        <span class="text-xs font-mono text-emerald-400">Zero-Trust &amp; Real-Time</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white">Finance &amp; Banking</h3>
+                    <p class="text-xs text-sky-400 font-medium mt-1">Core Modernization, Fraud Analytics &amp; Regulatory Automation</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mt-4">
+                        Delivering high-throughput payment rails, real-time fraud scoring, automated KYC/AML compliance workflows, and auditable cloud-native financial platforms.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Core banking API modernization &amp; real-time ledger pipelines</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>Automated KYC/AML reconciliation &amp; regulatory reporting bots</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-300">
+                            <span class="text-sky-400 font-bold">›</span>
+                            <span>PCI-DSS / ISO 27001 security controls &amp; SIEM observability</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800/80">
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">PCI-DSS / ISO</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Fraud AI</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">KYC / AML RPA</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400 font-mono text-[11px]">Zero Trust</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm font-semibold">
+                        <span class="text-slate-400 font-mono text-xs">Audit-Ready Architecture</span>
+                        <a href="{% url 'contact' %}?industry=finance-banking" class="text-sky-400 hover:text-sky-300">
+                            Discuss Use Case &rarr;
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

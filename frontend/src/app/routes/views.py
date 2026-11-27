@@ -72,3 +72,6 @@ def contact_view(request):
             "error_message": error_message,
         },
     )
+
+def about_us_view(request):
+    return render(request, 'about.html')

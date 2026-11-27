@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us | Rise Nest Solutions{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<section class="relative overflow-hidden border-b border-slate-800/80 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-400/30 bg-sky-500/10 text-sky-400 font-mono text-xs tracking-wider uppercase mb-6">
+            <span class="h-2 w-2 rounded-full bg-sky-400 animate-pulse"></span>
+            10 Years of Engineering Excellence
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+            Turning Complex Technical Challenges Into <span class="text-sky-400">Measurable Growth</span>
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            A trusted, full-scale technology partner bridging enterprise architecture, cloud computing, intelligent automation, and modern AI.
+        </p>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Narrative Column -->
+        <div class="lg:col-span-7 space-y-6">
+            <span class="font-mono text-xs uppercase tracking-widest text-sky-400">// Who We Are</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Our Story</h2>
+
+            <div class="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
+                <p>
+                    For a decade, we have been at the forefront of the software industry, helping businesses turn complex technical challenges into measurable growth. What started 10 years ago with a clear vision—to bridge the gap between enterprise technology and real-world business outcomes—has evolved into a trusted, full-scale technology partner.
+                </p>
+                <p>
+                    Over the past decade, we have worked across a wide spectrum of technologies and diverse global industries, successfully delivering end-to-end software solutions through every major shift in the digital landscape—from traditional enterprise architecture to cloud computing, intelligent automation, and modern AI. Today, our teams architect resilient systems, automate critical workflows, and build custom applications that power forward-thinking enterprises.
+                </p>
+                <p>
+                    Behind every line of code and cloud deployment is a decade-long legacy of adaptability and reliability, paired with a culture of curiosity and continuous learning. As we enter our next chapter of growth, we are looking for passionate builders, problem-solvers, and innovators to shape the future of technology with us.
+                </p>
+            </div>
+        </div>
+
+        <!-- Key Pillars / Highlights Grid -->
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-sky-400/40 transition">
+                <span class="block font-mono text-3xl font-bold text-sky-400 mb-2">10+</span>
+                <span class="text-sm text-slate-300 font-medium leading-snug block">Years of Proven Software Delivery</span>
+            </div>
+
+            <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-sky-400/40 transition">
+                <span class="block font-mono text-2xl font-bold text-white mb-2">End-to-End</span>
+                <span class="text-sm text-slate-300 font-medium leading-snug block">Enterprise &amp; Custom Engineering</span>
+            </div>
+
+            <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-sky-400/40 transition">
+                <span class="block font-mono text-2xl font-bold text-white mb-2">Cloud &amp; AI</span>
+                <span class="text-sm text-slate-300 font-medium leading-snug block">Modern Architecture &amp; Automation</span>
+            </div>
+
+            <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-sky-400/40 transition">
+                <span class="block font-mono text-2xl font-bold text-sky-400 mb-2">Global</span>
+                <span class="text-sm text-slate-300 font-medium leading-snug block">Cross-Industry Technology Partner</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Mission Section -->
+<section class="max-w-7xl mx-auto px-6 py-10">
+    <div class="rounded-2xl border border-slate-800 bg-[#03060E]/90 p-8 sm:p-12 lg:p-14 relative overflow-hidden">
+        <div class="absolute inset-y-0 left-0 w-1.5 bg-sky-400"></div>
+
+        <span class="font-mono text-xs uppercase tracking-widest text-sky-400">// Why We Exist</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-white tracking-tight">Our Mission</h2>
+
+        <p class="mt-6 text-slate-300 text-base sm:text-xl leading-relaxed max-w-4xl">
+            Our mission is to empower organizations to operate smarter, faster, and more securely through intelligent technology and bespoke software engineering. Building on a decade of cross-industry and multi-technology expertise, we exist to turn ambitious ideas into scalable, production-ready realities—helping businesses navigate digital transformation with confidence while giving top tech talent a platform to do the most meaningful work of their careers.
+        </p>
+    </div>
+</section>
+
+<!-- Dual Call to Action -->
+<section class="max-w-4xl mx-auto px-6 pt-16 pb-6 text-center">
+    <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+        Ready to Build What’s Next?
+    </h3>
+    <p class="mt-4 text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Whether you are modernizing enterprise systems or looking for a place to do the most meaningful engineering work of your career, let’s connect.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a href="{% url 'contact' %}"
+           class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition">
+            Partner With Us
+        </a>
+        <a href="{% url 'contact' %}?inquiry=careers"
+           class="px-6 py-3 rounded-lg border border-slate-700 hover:border-sky-400/60 bg-slate-900/60 text-white hover:text-sky-400 font-semibold text-sm transition">
+            Join Our Team
+        </a>
+    </div>
+</section>
+{% endblock %}
